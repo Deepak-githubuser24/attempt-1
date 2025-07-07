@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "AI Health Care",
+    "tagline": "Your Personal Health Assistant",
+    "support": "24/7 Customer Support Available"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "scan": "Scan Report",
+    "health": "Health Tracking",
+    "nutrition": "Nutrition",
+    "appointments": "Appointments",
+    "pharmacy": "Pharmacy",
+    "insurance": "Insurance",
+    "settings": "Settings"
+  },
+  "auth": {
+    "login": "Login",
+    "register": "Register",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "fullName": "Full Name",
+    "phone": "Phone Number",
+    "forgotPassword": "Forgot Password?",
+    "dontHaveAccount": "Don't have an account?",
+    "alreadyHaveAccount": "Already have an account?"
+  },
+  "dashboard": {
+    "welcome": "Welcome back",
+    "todayStats": "Today's Stats",
+    "waterIntake": "Water Intake",
+    "steps": "Steps",
+    "heartRate": "Heart Rate",
+    "sleep": "Sleep",
+    "quickActions": "Quick Actions",
+    "scanReport": "Scan Medical Report",
+    "bookAppointment": "Book Appointment",
+    "orderMedicine": "Order Medicine",
+    "trackInsurance": "Track Insurance",
+    "upcomingAppointments": "Upcoming Appointments",
+    "healthReminders": "Health Reminders",
+    "drinkWater": "Time to drink water!",
+    "takeMedicine": "Take your evening medicine",
+    "exerciseTime": "Daily exercise reminder"
+  },
+  "scan": {
+    "title": "Medical Report Scanner",
+    "description": "Upload or take a photo of your medical report for AI analysis",
+    "uploadImage": "Upload Image",
+    "takePhoto": "Take Photo",
+    "analyzing": "Analyzing your report...",
+    "results": "Analysis Results",
+    "recommendations": "Recommendations",
+    "consultDoctor": "Consult a Doctor"
+  },
+  "health": {
+    "title": "Health Tracking",
+    "vitals": "Vital Signs",
+    "activity": "Activity",
+    "sleep": "Sleep Patterns",
+    "nutrition": "Nutrition",
+    "weight": "Weight",
+    "bloodPressure": "Blood Pressure",
+    "glucose": "Blood Glucose",
+    "temperature": "Temperature",
+    "syncDevices": "Sync Fitness Devices"
+  },
+  "nutrition": {
+    "title": "Nutrition & Diet",
+    "recommendations": "Personalized Recommendations",
+    "mealPlan": "Today's Meal Plan",
+    "breakfast": "Breakfast",
+    "lunch": "Lunch",
+    "dinner": "Dinner",
+    "snacks": "Snacks",
+    "waterReminder": "Water Reminder",
+    "calories": "Calories",
+    "nutrients": "Nutrients"
+  },
+  "appointments": {
+    "title": "Appointments",
+    "book": "Book Appointment",
+    "upcoming": "Upcoming",
+    "history": "History",
+    "specialist": "Specialist",
+    "hospital": "Hospital",
+    "date": "Date",
+    "time": "Time",
+    "reason": "Reason for visit",
+    "bookSurgery": "Book Surgery",
+    "multiSpecialty": "Multi-Specialty Hospitals"
+  },
+  "pharmacy": {
+    "title": "Pharmacy",
+    "searchMedicine": "Search Medicine",
+    "nearbyStores": "Nearby Stores",
+    "orderOnline": "Order Online",
+    "prescriptions": "My Prescriptions",
+    "delivery": "Home Delivery",
+    "medicines": {
+      "fever": "Paracetamol, Ibuprofen",
+      "cough": "Dextromethorphan, Honey-based syrups",
+      "allergy": "Antihistamines, Calamine lotion"
+    }
+  },
+  "insurance": {
+    "title": "Insurance Claims",
+    "activeClaims": "Active Claims",
+    "claimHistory": "Claim History",
+    "newClaim": "Submit New Claim",
+    "status": "Status",
+    "amount": "Amount",
+    "trackClaim": "Track Claim"
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "language": "Language",
+    "notifications": "Notifications",
+    "privacy": "Privacy",
+    "support": "Support",
+    "about": "About",
+    "languages": {
+      "en": "English",
+      "hi": "हिंदी",
+      "ta": "தமிழ்",
+      "te": "తెలుగు"
+    }
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "success": "Success",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "download": "Download"
+  },
+  "notifications": {
+    "waterReminder": "💧 Time to drink water! Stay hydrated.",
+    "medicineReminder": "💊 Don't forget your medicine.",
+    "exerciseReminder": "🏃‍♂️ Time for your daily exercise!",
+    "appointmentReminder": "👨‍⚕️ Your appointment is in 1 hour.",
+    "avoidJunkFood": "🚫 Try to avoid junk food today!"
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "एआई स्वास्थ्य देखभाल",
+    "tagline": "आपका व्यक्तिगत स्वास्थ्य सहायक",
+    "support": "24/7 ग्राहक सहायता उपलब्ध"
+  },
+  "nav": {
+    "dashboard": "डैशबोर्ड",
+    "scan": "रिपोर्ट स्कैन",
+    "health": "स्वास्थ्य ट्रैकिंग",
+    "nutrition": "पोषण",
+    "appointments": "अपॉइंटमेंट",
+    "pharmacy": "दवाखाना",
+    "insurance": "बीमा",
+    "settings": "सेटिंग्स"
+  },
+  "auth": {
+    "login": "लॉगिन",
+    "register": "रजिस्टर",
+    "email": "ईमेल",
+    "password": "पासवर्ड",
+    "confirmPassword": "पासवर्ड की पुष्टि करें",
+    "fullName": "पूरा नाम",
+    "phone": "फोन नंबर",
+    "forgotPassword": "पासवर्ड भूल गए?",
+    "dontHaveAccount": "खाता नहीं है?",
+    "alreadyHaveAccount": "पहले से खाता है?"
+  },
+  "dashboard": {
+    "welcome": "वापसी पर स्वागत",
+    "todayStats": "आज की आंकड़े",
+    "waterIntake": "पानी का सेवन",
+    "steps": "कदम",
+    "heartRate": "हृदय गति",
+    "sleep": "नींद",
+    "quickActions": "त्वरित कार्य",
+    "scanReport": "मेडिकल रिपोर्ट स्कैन करें",
+    "bookAppointment": "अपॉइंटमेंट बुक करें",
+    "orderMedicine": "दवा ऑर्डर करें",
+    "trackInsurance": "बीमा ट्रैक करें",
+    "upcomingAppointments": "आगामी अपॉइंटमेंट",
+    "healthReminders": "स्वास्थ्य रिमाइंडर",
+    "drinkWater": "पानी पीने का समय!",
+    "takeMedicine": "शाम की दवा लें",
+    "exerciseTime": "दैनिक व्यायाम रिमाइंडर"
+  },
+  "scan": {
+    "title": "मेडिकल रिपोर्ट स्कैनर",
+    "description": "एआई विश्लेषण के लिए अपनी मेडिकल रिपोर्ट अपलोड करें या फोटो लें",
+    "uploadImage": "छवि अपलोड करें",
+    "takePhoto": "फोटो लें",
+    "analyzing": "आपकी रिपोर्ट का विश्लेषण...",
+    "results": "विश्लेषण परिणाम",
+    "recommendations": "सुझाव",
+    "consultDoctor": "डॉक्टर से सलाह लें"
+  },
+  "health": {
+    "title": "स्वास्थ्य ट्रैकिंग",
+    "vitals": "महत्वपूर्ण संकेत",
+    "activity": "गतिविधि",
+    "sleep": "नींद के पैटर्न",
+    "nutrition": "पोषण",
+    "weight": "वजन",
+    "bloodPressure": "रक्तचाप",
+    "glucose": "रक्त शुगर",
+    "temperature": "तापमान",
+    "syncDevices": "फिटनेस डिवाइस सिंक करें"
+  },
+  "nutrition": {
+    "title": "पोषण और आहार",
+    "recommendations": "व्यक्तिगत सुझाव",
+    "mealPlan": "आज का भोजन योजना",
+    "breakfast": "नाश्ता",
+    "lunch": "दोपहर का खाना",
+    "dinner": "रात का खाना",
+    "snacks": "नाश्ता",
+    "waterReminder": "पानी रिमाइंडर",
+    "calories": "कैलोरी",
+    "nutrients": "पोषक तत्व"
+  },
+  "appointments": {
+    "title": "अपॉइंटमेंट",
+    "book": "अपॉइंटमेंट बुक करें",
+    "upcoming": "आगामी",
+    "history": "इतिहास",
+    "specialist": "विशेषज्ञ",
+    "hospital": "अस्पताल",
+    "date": "तारीख",
+    "time": "समय",
+    "reason": "मुलाकात का कारण",
+    "bookSurgery": "सर्जरी बुक करें",
+    "multiSpecialty": "मल्टी-स्पेशलिटी अस्पताल"
+  },
+  "pharmacy": {
+    "title": "दवाखाना",
+    "searchMedicine": "दवा खोजें",
+    "nearbyStores": "नजदीकी स्टोर",
+    "orderOnline": "ऑनलाइन ऑर्डर",
+    "prescriptions": "मेरे प्रिस्क्रिप्शन",
+    "delivery": "होम डिलीवरी",
+    "medicines": {
+      "fever": "पैरासिटामोल, इबुप्रोफेन",
+      "cough": "डेक्सट्रोमेथोर्फान, शहद आधारित सिरप",
+      "allergy": "एंटीहिस्टामाइन, कैलामाइन लोशन"
+    }
+  },
+  "insurance": {
+    "title": "बीमा दावे",
+    "activeClaims": "सक्रिय दावे",
+    "claimHistory": "दावा इतिहास",
+    "newClaim": "नया दावा जमा करें",
+    "status": "स्थिति",
+    "amount": "राशि",
+    "trackClaim": "दावा ट्रैक करें"
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "profile": "प्रोफाइल",
+    "language": "भाषा",
+    "notifications": "सूचनाएं",
+    "privacy": "गोपनीयता",
+    "support": "सहायता",
+    "about": "के बारे में",
+    "languages": {
+      "en": "English",
+      "hi": "हिंदी",
+      "ta": "தமிழ்",
+      "te": "తెలుగు"
+    }
+  },
+  "common": {
+    "save": "सहेजें",
+    "cancel": "रद्द करें",
+    "submit": "जमा करें",
+    "loading": "लोड हो रहा है...",
+    "success": "सफलता",
+    "error": "त्रुटि",
+    "retry": "पुनः प्रयास",
+    "close": "बंद करें",
+    "edit": "संपादित करें",
+    "delete": "हटाएं",
+    "view": "देखें",
+    "download": "डाउनलोड करें"
+  },
+  "notifications": {
+    "waterReminder": "💧 पानी पीने का समय! हाइड्रेटेड रहें।",
+    "medicineReminder": "💊 अपनी दवा लेना न भूलें।",
+    "exerciseReminder": "🏃‍♂️ दैनिक व्यायाम का समय!",
+    "appointmentReminder": "👨‍⚕️ आपका अपॉइंटमेंट 1 घंटे में है।",
+    "avoidJunkFood": "🚫 आज जंक फूड से बचने की कोशिश करें!"
+  }
+}

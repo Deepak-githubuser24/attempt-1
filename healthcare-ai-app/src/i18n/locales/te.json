@@ -1,0 +1,152 @@
+{
+  "app": {
+    "name": "AI ఆరోగ్య సంరక్షణ",
+    "tagline": "మీ వ్యక్తిగత ఆరోగ్య సహాయకుడు",
+    "support": "24/7 కస్టమర్ సపోర్ట్ అందుబాటులో"
+  },
+  "nav": {
+    "dashboard": "డాష్‌బోర్డ్",
+    "scan": "రిపోర్ట్ స్కాన్",
+    "health": "ఆరోగ్య ట్రాకింగ్",
+    "nutrition": "పోషకాహారం",
+    "appointments": "అపాయింట్‌మెంట్లు",
+    "pharmacy": "మందుల దుకాణం",
+    "insurance": "బీమా",
+    "settings": "సెట్టింగ్స్"
+  },
+  "auth": {
+    "login": "లాగిన్",
+    "register": "రిజిస్టర్",
+    "email": "ఇమెయిల్",
+    "password": "పాస్‌వర్డ్",
+    "confirmPassword": "పాస్‌వర్డ్ ధృవీకరించండి",
+    "fullName": "పూర్తి పేరు",
+    "phone": "ఫోన్ నంబర్",
+    "forgotPassword": "పాస్‌వర్డ్ మర్చిపోయారా?",
+    "dontHaveAccount": "ఖాతా లేదా?",
+    "alreadyHaveAccount": "ఇప్పటికే ఖాతా ఉందా?"
+  },
+  "dashboard": {
+    "welcome": "తిరిగి స్వాగతం",
+    "todayStats": "నేటి గణాంకాలు",
+    "waterIntake": "నీటి వినియోగం",
+    "steps": "అడుగులు",
+    "heartRate": "హృదయ స్పందన",
+    "sleep": "నిద్రలేవు",
+    "quickActions": "త్వరిత చర్యలు",
+    "scanReport": "మెడికల్ రిపోర్ట్ స్కాన్",
+    "bookAppointment": "అపాయింట్‌మెంట్ బుక్ చేయండి",
+    "orderMedicine": "మందు ఆర్డర్",
+    "trackInsurance": "బీమా ట్రాక్ చేయండి",
+    "upcomingAppointments": "రాబోయే అపాయింట్‌మెంట్లు",
+    "healthReminders": "ఆరోగ్య గుర్తింపులు",
+    "drinkWater": "నీరు తాగే సమయం!",
+    "takeMedicine": "సాయంత్రం మందు తీసుకోండి",
+    "exerciseTime": "రోజువారీ వ్యాయామ గుర్తింపు"
+  },
+  "scan": {
+    "title": "మెడికల్ రిపోర్ట్ స్కానర్",
+    "description": "AI విశ్లేషణ కోసం మీ మెడికల్ రిపోర్ట్‌ను అప్‌లోడ్ చేయండి లేదా ఫోటో తీయండి",
+    "uploadImage": "చిత్రం అప్‌లోడ్ చేయండి",
+    "takePhoto": "ఫోటో తీయండి",
+    "analyzing": "మీ రిపోర్ట్‌ను విశ్లేషిస్తున్నాం...",
+    "results": "విశ్లేషణ ఫలితాలు",
+    "recommendations": "సిఫార్సులు",
+    "consultDoctor": "వైద్యుడిని సంప్రదించండి"
+  },
+  "health": {
+    "title": "ఆరోగ్య ట్రాకింగ్",
+    "vitals": "ముఖ్యమైన సంకేతాలు",
+    "activity": "కార్యకలాపం",
+    "sleep": "నిద్రల విధానాలు",
+    "nutrition": "పోషకాహారం",
+    "weight": "బరువు",
+    "bloodPressure": "రక్తపోటు",
+    "glucose": "రక్తంలో చక్కెర",
+    "temperature": "ఉష్ణోగ్రత",
+    "syncDevices": "ఫిట్‌నెస్ పరికరాలను సింక్ చేయండి"
+  },
+  "nutrition": {
+    "title": "పోషకాహారం మరియు ఆహారం",
+    "recommendations": "వ్యక్తిగత సిఫార్సులు",
+    "mealPlan": "నేటి భోజన ప్రణాళిక",
+    "breakfast": "అల్పాహారం",
+    "lunch": "మధ్యాహ్న భోజనం",
+    "dinner": "రాత్రి భోజనం",
+    "snacks": "చిరుతిండిలు",
+    "waterReminder": "నీటి గుర్తింపు",
+    "calories": "కేలరీలు",
+    "nutrients": "పోషకాలు"
+  },
+  "appointments": {
+    "title": "అపాయింట్‌మెంట్లు",
+    "book": "అపాయింట్‌మెంట్ బుక్ చేయండి",
+    "upcoming": "రాబోయేవి",
+    "history": "చరిత్ర",
+    "specialist": "నిపుణుడు",
+    "hospital": "ఆసుపత్రి",
+    "date": "తేదీ",
+    "time": "సమయం",
+    "reason": "సందర్శన కారణం",
+    "bookSurgery": "శస్త్రచికిత్స బుక్ చేయండి",
+    "multiSpecialty": "మల్టీ-స్పెషాలిటీ ఆసుపత్రులు"
+  },
+  "pharmacy": {
+    "title": "మందుల దుకాణం",
+    "searchMedicine": "మందు వెతకండి",
+    "nearbyStores": "సమీపంలోని దుకాణాలు",
+    "orderOnline": "ఆన్‌లైన్ ఆర్డర్",
+    "prescriptions": "నా ప్రిస్క్రిప్షన్లు",
+    "delivery": "హోం డెలివరీ",
+    "medicines": {
+      "fever": "పారాసిటమాల్, ఇబుప్రోఫెన్",
+      "cough": "డెక్స్ట్రోమెథార్ఫాన్, తేనె ఆధారిత సిరప్‌లు",
+      "allergy": "యాంటిహిస్టమైన్స్, కాలమైన్ లోషన్"
+    }
+  },
+  "insurance": {
+    "title": "బీమా దావాలు",
+    "activeClaims": "క్రియాశీల దావాలు",
+    "claimHistory": "దావా చరిత్ర",
+    "newClaim": "కొత్త దావా సమర్పించండి",
+    "status": "స్థితి",
+    "amount": "మొత్తం",
+    "trackClaim": "దావా ట్రాక్ చేయండి"
+  },
+  "settings": {
+    "title": "సెట్టింగ్స్",
+    "profile": "ప్రొఫైల్",
+    "language": "భాష",
+    "notifications": "నోటిఫికేషన్లు",
+    "privacy": "గోప్యత",
+    "support": "మద్దతు",
+    "about": "గురించి",
+    "languages": {
+      "en": "English",
+      "hi": "हिंदी",
+      "ta": "தமிழ்",
+      "te": "తెలుగు"
+    }
+  },
+  "common": {
+    "save": "సేవ్ చేయండి",
+    "cancel": "రద్దు చేయండి",
+    "submit": "సమర్పించండి",
+    "loading": "లోడ్ అవుతోంది...",
+    "success": "విజయం",
+    "error": "లోపం",
+    "retry": "మళ్లీ ప్రయత్నించండి",
+    "close": "మూసివేయండి",
+    "edit": "ఎడిట్ చేయండి",
+    "delete": "తొలగించండి",
+    "view": "చూడండి",
+    "download": "డౌన్‌లోడ్ చేయండి"
+  },
+  "notifications": {
+    "waterReminder": "💧 నీరు తాగే సమయం! హైడ్రేట్‌గా ఉండండి.",
+    "medicineReminder": "💊 మీ మందు తీసుకోవడం మర్చిపోవద్దు.",
+    "exerciseReminder": "🏃‍♂️ రోజువారీ వ్యాయామ సమయం!",
+    "appointmentReminder": "👨‍⚕️ మీ అపాయింట్‌మెంట్ 1 గంటలో.",
+    "avoidJunkFood": "🚫 ఈ రోజు జంక్ ఫుడ్ తప్పించడానికి ప్రయత్నించండి!"
+  }
+}
