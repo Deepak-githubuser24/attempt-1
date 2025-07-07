@@ -36,10 +36,8 @@ const Navbar = ({ user, onLogout }) => {
   ];
 
   const languages = [
-    { code: 'en', name: t('settings.languages.en'), flag: '🇺🇸' },
-    { code: 'hi', name: t('settings.languages.hi'), flag: '🇮🇳' },
-    { code: 'ta', name: t('settings.languages.ta'), flag: '🇮🇳' },
-    { code: 'te', name: t('settings.languages.te'), flag: '🇮🇳' },
+    { code: 'ta', name: 'தமிழ்', flag: '🇮🇳' },
+    { code: 'hi', name: 'हिंदी', flag: '🇮🇳' }
   ];
 
   const changeLanguage = (lng) => {

@@ -2,23 +2,15 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 
 // Import translations
-import enTranslations from './locales/en.json';
-import hiTranslations from './locales/hi.json';
 import taTranslations from './locales/ta.json';
-import teTranslations from './locales/te.json';
+import hiTranslations from './locales/hi.json';
 
 const resources = {
-  en: {
-    translation: enTranslations
-  },
-  hi: {
-    translation: hiTranslations
-  },
   ta: {
     translation: taTranslations
   },
-  te: {
-    translation: teTranslations
+  hi: {
+    translation: hiTranslations
   }
 };
 
@@ -26,8 +18,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'en', // default language
-    fallbackLng: 'en',
+    lng: 'ta', // Tamil as default language
+    fallbackLng: 'ta',
     debug: false,
     interpolation: {
       escapeValue: false
