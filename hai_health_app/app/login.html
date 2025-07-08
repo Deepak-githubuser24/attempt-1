@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | HAI App</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .auth-container {
+      max-width: 400px;
+      margin: 120px auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .auth-container h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .auth-container input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    .error-msg {
+      color: #e53935;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .link {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+      text-decoration: none;
+      color: #1e88e5;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Login to HAI</h2>
+    <div id="error" class="error-msg" style="display:none;"></div>
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Password" required />
+    <button class="btn btn-primary" id="loginBtn" style="width: 100%">Login</button>
+    <a class="link" href="register.html">New user? Register here</a>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    document.getElementById('loginBtn').addEventListener('click', async () => {
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const res = await login(email, password);
+      if (res.error) {
+        showError(res.error);
+      } else {
+        window.location.href = 'dashboard.html';
+      }
+    });
+
+    function showError(msg) {
+      const el = document.getElementById('error');
+      el.innerText = msg;
+      el.style.display = 'block';
+    }
+  </script>
+</body>
+</html>

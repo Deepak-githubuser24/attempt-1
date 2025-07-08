@@ -50,3 +50,24 @@ This project is licensed under the MIT License – feel free to build upon it fo
 
 ---
 Made with ❤️  by the HAI team – _"Healthcare Anytime Anywhere"_.
+
+## 🏗️ Running the Full App (Backend + Front-end)
+
+1. **Install and start the backend API**
+   ```bash
+   cd server
+   npm install
+   npm start   # starts on http://localhost:4000
+   ```
+   The server uses SQLite (file `database.db`) and seeds some sample doctors automatically.
+
+2. **Open the front-end app**
+   ```bash
+   cd ../hai_health_app/app
+   xdg-open login.html   # or open in your browser
+   ```
+
+   • Register a new account → you’ll land on the dashboard.
+   • Search doctors, book appointments, manage medical records, and generate a telemedicine meeting link (powered by Jitsi Meet).
+
+> NOTE: The front-end assumes the API is running at `http://localhost:4000`. If you deploy elsewhere, edit `hai_health_app/app/app.js` and change `API_URL`.

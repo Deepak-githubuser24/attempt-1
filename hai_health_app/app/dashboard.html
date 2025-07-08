@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | HAI App</title>
+  <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .dashboard-container { padding: 1rem; margin-top: 80px; }
+    .topbar { background:#fff; position:fixed; top:0; left:0; width:100%; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem; box-shadow:0 2px 4px rgba(0,0,0,0.05); z-index:1000; }
+    .nav-tabs { display:flex; gap:1rem; }
+    .nav-tabs button { background:none; border:none; font-weight:500; cursor:pointer; color:#333; padding:0.5rem 1rem; border-bottom:2px solid transparent; }
+    .nav-tabs button.active { border-color:#1e88e5; color:#1e88e5; }
+    .section { display:none; }
+    .section.active { display:block; }
+
+    /* doctor cards */
+    .doctor-card { background:#fff; border-radius:10px; padding:1rem; box-shadow:0 2px 4px rgba(0,0,0,0.05); display:flex; gap:1rem; }
+    .doctor-card img { width:80px; height:80px; border-radius:50%; }
+    .doctor-card button { margin-top:0.5rem; }
+
+    table { width:100%; border-collapse:collapse; margin-top:1rem; }
+    th, td { padding:0.75rem; border:1px solid #eee; text-align:left; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="logo">HAI</div>
+    <div class="nav-tabs">
+      <button data-tab="doctors" class="active">Doctors</button>
+      <button data-tab="appointments">Appointments</button>
+      <button data-tab="records">Records</button>
+      <button data-tab="telemedicine">Telemedicine</button>
+    </div>
+    <button class="btn btn-secondary" id="logoutBtn">Logout</button>
+  </div>
+
+  <div class="dashboard-container">
+    <!-- Doctors Section -->
+    <div id="doctors" class="section active">
+      <input type="text" id="searchInput" placeholder="Search doctors or specialties" style="width:100%; padding:0.75rem; margin-bottom:1rem; border:1px solid #ddd; border-radius:5px;" />
+      <div id="doctorList" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:1rem;"></div>
+    </div>
+
+    <!-- Appointments Section -->
+    <div id="appointments" class="section">
+      <h2>Your Appointments</h2>
+      <table>
+        <thead><tr><th>Date</th><th>Time</th><th>Doctor</th><th>Status</th></tr></thead>
+        <tbody id="apptTable"></tbody>
+      </table>
+    </div>
+
+    <!-- Records Section -->
+    <div id="records" class="section">
+      <h2>Medical Records</h2>
+      <button class="btn btn-primary" id="addRecordBtn">Add Record</button>
+      <table>
+        <thead><tr><th>Date</th><th>Title</th><th>Description</th></tr></thead>
+        <tbody id="recordsTable"></tbody>
+      </table>
+    </div>
+
+    <!-- Telemedicine -->
+    <div id="telemedicine" class="section" style="text-align:center;">
+      <h2>Start Teleconsultation</h2>
+      <button class="btn btn-primary" id="startTeleBtn">Generate Meeting Link</button>
+      <div id="teleLink" style="margin-top:1rem;"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script>
+    // Tab navigation
+    document.querySelectorAll('.nav-tabs button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.nav-tabs button').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const tab = btn.getAttribute('data-tab');
+        document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+        document.getElementById(tab).classList.add('active');
+        if (tab === 'appointments') loadAppointments();
+        if (tab === 'records') loadRecords();
+      })
+    });
+
+    document.getElementById('logoutBtn').addEventListener('click', () => { logout(); });
+
+    // Doctors search
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('input', () => loadDoctors(searchInput.value));
+
+    // Load initial doctors
+    loadDoctors();
+
+    async function loadDoctors(q='') {
+      const res = await fetch(`${API_URL}/doctors${q ? `?query=${encodeURIComponent(q)}` : ''}`);
+      const doctors = await res.json();
+      const list = document.getElementById('doctorList');
+      list.innerHTML = '';
+      doctors.forEach(doc => {
+        const card = document.createElement('div');
+        card.className = 'doctor-card';
+        card.innerHTML = `<img src="${doc.avatar}" alt="${doc.name}"><div><h3>${doc.name}</h3><p>${doc.specialty}</p><button class="btn btn-secondary" data-id="${doc.id}">Book</button></div>`;
+        list.appendChild(card);
+      });
+      // book buttons
+      document.querySelectorAll('[data-id]').forEach(btn => {
+        btn.addEventListener('click', () => openBooking(btn.getAttribute('data-id')));
+      })
+    }
+
+    function openBooking(doctorId) {
+      const date = prompt('Enter date (YYYY-MM-DD)');
+      const time = prompt('Enter time (HH:MM)');
+      const reason = prompt('Reason for visit');
+      if (!date || !time) return alert('Date and time required');
+      fetch(`${API_URL}/appointments`, {
+        method: 'POST',
+        headers: authHeaders(),
+        body: JSON.stringify({ doctor_id: doctorId, date, time, reason })
+      }).then(r => r.json()).then(a => {
+        alert('Appointment booked');
+        loadAppointments();
+      });
+    }
+
+    async function loadAppointments() {
+      const res = await fetch(`${API_URL}/appointments`, { headers: authHeaders() });
+      const data = await res.json();
+      const tbody = document.getElementById('apptTable');
+      tbody.innerHTML = '';
+      data.forEach(appt => {
+        tbody.innerHTML += `<tr><td>${appt.date}</td><td>${appt.time}</td><td>${appt.doctor_id}</td><td>${appt.status}</td></tr>`;
+      });
+    }
+
+    // Records
+    document.getElementById('addRecordBtn').addEventListener('click', () => {
+      const title = prompt('Record title');
+      const description = prompt('Description');
+      const date = prompt('Date (YYYY-MM-DD)', new Date().toISOString().slice(0,10));
+      if (!title) return;
+      fetch(`${API_URL}/records`, {
+        method: 'POST',
+        headers: authHeaders(),
+        body: JSON.stringify({ title, description, date })
+      }).then(r => r.json()).then(rec => loadRecords());
+    });
+
+    async function loadRecords() {
+      const res = await fetch(`${API_URL}/records`, { headers: authHeaders() });
+      const data = await res.json();
+      const tbody = document.getElementById('recordsTable');
+      tbody.innerHTML = '';
+      data.forEach(rec => {
+        tbody.innerHTML += `<tr><td>${rec.date}</td><td>${rec.title}</td><td>${rec.description || ''}</td></tr>`;
+      });
+    }
+
+    // Telemedicine
+    document.getElementById('startTeleBtn').addEventListener('click', async () => {
+      const res = await fetch(`${API_URL}/telemedicine/room`, { headers: authHeaders() });
+      const data = await res.json();
+      const url = `https://meet.jit.si/${data.room}`;
+      const link = `<a href="${url}" target="_blank">Join Meeting</a>`;
+      document.getElementById('teleLink').innerHTML = link;
+    });
+  </script>
+</body>
+</html>
