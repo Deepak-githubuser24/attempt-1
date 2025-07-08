@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAI | Healthcare Anytime Anywhere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">HAI</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Started</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Healthcare Anytime, Anywhere</h1>
+            <p>Your health companion in the palm of your hand. Book appointments, consult doctors, and manage your medical records with HAI.</p>
+            <button class="btn btn-secondary" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">Explore Features</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container section-header">
+            <h2>Our Core Features</h2>
+            <p>Everything you need to manage your healthcare journey.</p>
+        </div>
+        <div class="container features-grid">
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/4320/4320337.png" alt="Doctors"/>
+                <h3>Find Doctors</h3>
+                <p>Search and filter from a pool of certified specialists anytime, anywhere.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/1159/1159633.png" alt="Appointments"/>
+                <h3>Book Appointments</h3>
+                <p>Schedule in-clinic or virtual visits in just a few taps and keep track of upcoming appointments.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/2966/2966327.png" alt="Records"/>
+                <h3>Medical Records</h3>
+                <p>Securely store and access your prescriptions, lab results, and vaccination records.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://cdn-icons-png.flaticon.com/512/4752/4752151.png" alt="24/7 Support"/>
+                <h3>24/7 Teleconsultation</h3>
+                <p>Chat or video-call with healthcare professionals around the clock from the comfort of your home.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container about-content">
+            <div class="about-text">
+                <h2>About HAI</h2>
+                <p>HAI (Healthcare Anytime Anywhere) is committed to making quality healthcare accessible and convenient for everyone. We leverage technology to bridge the gap between patients and healthcare providers, ensuring timely care and improved outcomes.</p>
+                <ul>
+                    <li>Trusted network of verified doctors</li>
+                    <li>Secure and HIPAA-compliant platform</li>
+                    <li>User-centric experience with multilingual support</li>
+                </ul>
+            </div>
+            <div class="about-image">
+                <img src="https://cdn-icons-png.flaticon.com/512/5622/5622289.png" alt="About HAI" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container contact-content">
+            <h2>Get Started with HAI</h2>
+            <p>Join thousands who trust HAI for their healthcare needs.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Download App</a>
+                <a href="#" class="btn btn-secondary">Request Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2025 HAI | Healthcare Anytime Anywhere. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
