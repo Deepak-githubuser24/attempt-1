@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:4000/api';
+const API_URL = '/api';
 
 function saveToken(token) {
   localStorage.setItem('hai_token', token);

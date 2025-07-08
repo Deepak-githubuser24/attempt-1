@@ -3,6 +3,7 @@ const cors = require('cors');
 const Database = require('better-sqlite3');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const path = require('path');
 
 const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkey';
 const PORT = process.env.PORT || 4000;
@@ -121,6 +122,15 @@ initDB();
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+// Serve static front-end (hai_health_app/app)
+const staticDir = path.join(__dirname, '../hai_health_app/app');
+app.use(express.static(staticDir));
+
+// Fallback: open login page for root URL
+app.get('/', (req, res) => {
+  res.sendFile(path.join(staticDir, 'login.html'));
+});
 
 function generateToken(user) {
   return jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: '7d' });
