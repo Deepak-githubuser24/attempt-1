@@ -87,6 +87,33 @@ function initDB() {
     });
     insertMany(seedDoctors);
   }
+
+  // Seed demo user with sample appointments/records
+  const demoEmail = 'demo@hai.com';
+  let demoUserId;
+  const existingDemo = db.prepare('SELECT id FROM users WHERE email = ?').get(demoEmail);
+  if (!existingDemo) {
+    const hashedDemoPass = bcrypt.hashSync('test123', 10);
+    const info = db.prepare('INSERT INTO users (email, password, name) VALUES (?, ?, ?)').run(demoEmail, hashedDemoPass, 'Demo User');
+    demoUserId = info.lastInsertRowid;
+  } else {
+    demoUserId = existingDemo.id;
+  }
+
+  // Add a sample appointment if none
+  const apptCount = db.prepare('SELECT COUNT(*) as count FROM appointments WHERE user_id = ?').get(demoUserId).count;
+  if (apptCount === 0) {
+    const doctor = db.prepare('SELECT id FROM doctors LIMIT 1').get();
+    if (doctor) {
+      db.prepare('INSERT INTO appointments (user_id, doctor_id, date, time, reason) VALUES (?, ?, ?, ?, ?)').run(demoUserId, doctor.id, '2025-01-15', '10:00', 'Annual check-up');
+    }
+  }
+
+  // Add a sample medical record if none
+  const recordCount = db.prepare('SELECT COUNT(*) as count FROM records WHERE user_id = ?').get(demoUserId).count;
+  if (recordCount === 0) {
+    db.prepare('INSERT INTO records (user_id, title, description, date) VALUES (?, ?, ?, ?)').run(demoUserId, 'Flu Vaccine', 'Influenza vaccination', '2024-11-20');
+  }
 }
 
 initDB();

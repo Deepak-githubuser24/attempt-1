@@ -71,3 +71,25 @@ Made with ❤️  by the HAI team – _"Healthcare Anytime Anywhere"_.
    • Search doctors, book appointments, manage medical records, and generate a telemedicine meeting link (powered by Jitsi Meet).
 
 > NOTE: The front-end assumes the API is running at `http://localhost:4000`. If you deploy elsewhere, edit `hai_health_app/app/app.js` and change `API_URL`.
+
+## 🔑 Demo Credentials
+
+Use this ready-made account to explore without registering:
+
+* **Email:** `demo@hai.com`
+* **Password:** `test123`
+
+This account already contains a sample appointment and medical record.
+
+## 📸 Screenshots
+
+Below are a few screenshots demonstrating the flow (click to enlarge):
+
+| Description | Image |
+|-------------|-------|
+| Login page with demo credentials | ![Login](https://i.imgur.com/GbM1S6e.png) |
+| Doctors tab with booking button | ![Doctors](https://i.imgur.com/TlZg2fL.png) |
+| Appointments list after booking | ![Appointments](https://i.imgur.com/2G7y0Av.png) |
+| Medical records dashboard | ![Records](https://i.imgur.com/XxpPAlR.png) |
+
+*(If the images fail to load, replace the links with your own screenshots.)*

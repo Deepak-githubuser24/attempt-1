@@ -79,6 +79,13 @@ img {
   color: #1e88e5;
 }
 
+.small-tagline {
+  font-size: 0.8rem;
+  font-weight: 400;
+  margin-left: 4px;
+  color: #1e88e5;
+}
+
 .nav-links {
   list-style: none;
   display: flex;
